@@ -10,17 +10,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_main)
-        replaceFragment(FragmenLargeNews())
+        replaceFragment(LargeNewsFragment())
 
     }
 
-    private fun replaceFragment(fragmenLargeNews: Fragment) {
+    private fun replaceFragment(largeNewsFragment: Fragment) {
 
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frame_layout, fragmenLargeNews)
+        fragmentTransaction.replace(R.id.frame_layout, largeNewsFragment)
         fragmentTransaction.commit()
 
     }
-
 }
