@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.service_operator.databinding.ItemLargeNewBinding
-import com.example.service_operator.room.Entity.LargeNews
+import com.example.service_operator.room.entity.LargeNews
 
 class NewsAdapter(
     private val largeNewsList: List<LargeNews>

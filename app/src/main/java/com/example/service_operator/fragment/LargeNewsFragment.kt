@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.service_operator.viewmodel.LargeNewsViewModel
 import com.example.service_operator.fragment.adapter.NewsAdapter
 import com.example.service_operator.databinding.LargeNewsFragmentBinding
-import com.example.service_operator.room.Entity.LargeNews
+import com.example.service_operator.room.entity.LargeNews
 
 class LargeNewsFragment : Fragment() {
     private lateinit var binding: LargeNewsFragmentBinding

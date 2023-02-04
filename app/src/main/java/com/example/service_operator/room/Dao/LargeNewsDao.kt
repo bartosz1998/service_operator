@@ -2,7 +2,7 @@ package com.example.service_operator.room.Dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.example.service_operator.room.Entity.LargeNews
+import com.example.service_operator.room.entity.LargeNews
 
 @Dao
 interface LargeNewsDao {
