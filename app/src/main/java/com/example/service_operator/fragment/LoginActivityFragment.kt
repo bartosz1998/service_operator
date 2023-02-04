@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.service_operator.R
 import com.example.service_operator.databinding.LoginActivityBinding
 
 class LoginActivityFragment: Fragment() {
@@ -26,7 +27,9 @@ class LoginActivityFragment: Fragment() {
 
         binding.loginButton.setOnClickListener(View.OnClickListener {
             if (binding.username.text.toString() == "user" && binding.password.text.toString() == "1234"){
-                Toast.makeText(requireContext(), "Login Successful!", Toast.LENGTH_SHORT).show()
+                val fragment = LargeNewsFragment()
+                val transaction = fragmentManager?.beginTransaction()
+                transaction?.replace(R.id.frame_layout, LargeNewsFragment())?.commit()
             } else {
                 Toast.makeText(requireContext(), "Login Failed!", Toast.LENGTH_SHORT).show()
             }

@@ -28,9 +28,9 @@ class LargeNewsFragment : Fragment() {
 
         largeNewsViewModel = ViewModelProvider(this).get(LargeNewsViewModel::class.java)
 
-        val largeNews = LargeNews(0, "dsafd")
-
-        largeNewsViewModel.addUser(largeNews)
+//        val largeNews = LargeNews(0, "dsafd")
+//
+//        largeNewsViewModel.addUser(largeNews)
 
         largeNewsViewModel.readAllData.observe(viewLifecycleOwner, Observer { largeNews ->
             binding.rvNews.layoutManager = LinearLayoutManager(context)

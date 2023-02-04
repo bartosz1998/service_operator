@@ -2,9 +2,11 @@ package com.example.service_operator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+
 import androidx.fragment.app.Fragment
 import com.example.service_operator.fragment.LargeNewsFragment
 import com.example.service_operator.fragment.LoginActivityFragment
+import com.google.android.material.appbar.MaterialToolbar
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,8 +14,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_main)
+
 //        replaceFragment(LargeNewsFragment())
-        replaceFragment(LoginActivityFragment())
+        supportFragmentManager.beginTransaction().replace(R.id.frame_layout, LoginActivityFragment()).commit()
 
     }
 
@@ -25,14 +28,4 @@ class MainActivity : AppCompatActivity() {
 //        fragmentTransaction.commit()
 //
 //    }
-
-    private fun replaceFragment(largeNewsFragment: Fragment) {
-
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frame_layout, largeNewsFragment)
-        fragmentTransaction.commit()
-
-    }
-
 }
