@@ -1,9 +1,11 @@
-package com.example.service_operator
+package com.example.service_operator.room
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.service_operator.room.Entity.LargeNews
+import com.example.service_operator.room.Dao.LargeNewsDao
 
 @Database(entities = [LargeNews::class], version = 1)
 abstract class LargeDataBase : RoomDatabase(){
@@ -13,7 +15,7 @@ abstract class LargeDataBase : RoomDatabase(){
         @Volatile
         private var INSTANCE: LargeDataBase? = null
 
-        fun getDatabase(context: Context): LargeDataBase{
+        fun getDatabase(context: Context): LargeDataBase {
             val tempInstance = INSTANCE
 
             if (tempInstance != null) {

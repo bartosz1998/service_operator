@@ -1,4 +1,4 @@
-package com.example.service_operator
+package com.example.service_operator.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,8 +8,10 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.service_operator.databinding.ItemLargeNewBinding.inflate
+import com.example.service_operator.viewmodel.LargeNewsViewModel
+import com.example.service_operator.fragment.adapter.NewsAdapter
 import com.example.service_operator.databinding.LargeNewsFragmentBinding
+import com.example.service_operator.room.Entity.LargeNews
 
 class LargeNewsFragment : Fragment() {
     private lateinit var binding: LargeNewsFragmentBinding

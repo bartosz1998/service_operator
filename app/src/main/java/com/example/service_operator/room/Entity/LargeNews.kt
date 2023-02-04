@@ -1,4 +1,4 @@
-package com.example.service_operator
+package com.example.service_operator.room.Entity
 
 import android.os.Parcelable
 import androidx.room.Entity

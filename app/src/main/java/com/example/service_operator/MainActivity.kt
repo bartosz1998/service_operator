@@ -3,6 +3,7 @@ package com.example.service_operator
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import com.example.service_operator.fragment.LargeNewsFragment
 
 class MainActivity : AppCompatActivity() {
 

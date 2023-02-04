@@ -1,9 +1,10 @@
-package com.example.service_operator
+package com.example.service_operator.fragment.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.service_operator.databinding.ItemLargeNewBinding
+import com.example.service_operator.room.Entity.LargeNews
 
 class NewsAdapter(
     private val largeNewsList: List<LargeNews>

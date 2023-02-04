@@ -1,9 +1,12 @@
-package com.example.service_operator
+package com.example.service_operator.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
+import com.example.service_operator.repository.LargeNewsRepository
+import com.example.service_operator.room.Entity.LargeNews
+import com.example.service_operator.room.LargeDataBase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

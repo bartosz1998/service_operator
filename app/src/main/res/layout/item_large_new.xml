@@ -7,7 +7,7 @@
 
         <variable
             name="largeNews"
-            type="com.example.service_operator.LargeNews" />
+            type="com.example.service_operator.room.Entity.LargeNews" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
