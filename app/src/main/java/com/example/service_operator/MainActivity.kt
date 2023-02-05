@@ -2,6 +2,7 @@ package com.example.service_operator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
@@ -21,7 +22,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        toolbar.setNavigationIcon(R.drawable.ic_baseline_menu_24)
+        toolbar.setTitle(R.string.app_name)
         setSupportActionBar(toolbar)
+
 
         val navigationView = findViewById<NavigationView>(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener(this)
@@ -34,9 +38,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 .replace(R.id.frame_layout, LoginActivityFragment()).commit()
             navigationView.setCheckedItem(R.id.nav_home)
         }
-
-
-
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -53,5 +54,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         } else {
             onBackPressedDispatcher.onBackPressed()
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.top_bar_app, menu)
+        return super.onCreateOptionsMenu(menu)
     }
 }
